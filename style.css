@@ -1,0 +1,214 @@
+/* GENERAL */
+*:focus {
+    outline: none;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+/* END OF GENERAL */
+
+/* HEADER */
+header {
+    display: block;
+    background: url(img/Header.png) no-repeat;
+    width: auto;
+    height: 16em;
+    padding: 4% 5%;
+}
+
+#logo {
+    width: 12em;
+}
+
+#header-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5em;
+}
+
+#header-bottom {
+    display: flex;
+    flex-direction: column;
+    color: #616260;
+    font-weight: 700;
+}
+
+#header-title-bottom {
+    font-size: 5em;
+    color: #f25f5c;
+}
+
+.social-icon {
+    width: 2em;
+    margin-left: 2em;
+}
+/* END OF HEADER */
+
+/* MAIN SECTION */
+main {
+    padding: 4% 5%;
+    background-color: #50514f;
+    color: #eaeaea;
+}
+
+#main-top {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main-top > label {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+#breaker-quantity {
+    padding-left: 0.8em;
+    margin-left: 0.8em;
+    height: 2.2em;
+    width: 3em;
+    font-size: 1.2em;
+    font-weight: 700;
+    appearance: none;
+    background-color: #eaeaea;
+    color: #50514f;
+    border-radius: 0.4em;
+}
+
+#btn {
+    padding: 0.5em;
+    margin-right: 20em;
+    margin-left: 0.5em;
+    width: 5em;
+    font-weight: 700;
+    font-size: 1.2em;
+    background-color: #f25f5c;
+    color: #eaeaea;
+    border: none;
+    border-radius: 0.4em;
+}
+
+#btn:hover {
+    background-color: #e23937;
+    color: #333;
+    border: 1px solid #f25f5c;
+    -webkit-box-shadow: 0 8px 6px -6px #3a3a3a;
+    -moz-box-shadow: 0 8px 6px -6px #3a3a3a;
+    box-shadow: 0 8px 6px -6px #3a3a3a;
+    cursor: pointer;
+}
+#actions > ol {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#actions img {
+    width: 40px;
+    height: 40px;
+    padding-left: 2em;
+}
+
+/* POPUP MESSAGE FOR RESET ALL BTN */
+/* https://css-tricks.com/css-content/ */
+
+.message-btn {
+    color: #900;
+    text-decoration: none;
+}
+
+.message-btn:hover {
+    color: red;
+    position: relative;
+}
+
+.message-btn[title]:hover::after {
+    content: attr(title);
+    padding: 4px 8px;
+    color: #333;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    white-space: nowrap;
+    z-index: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0px 0px 4px #222;
+    -webkit-box-shadow: 0px 0px 4px #222;
+    box-shadow: 0px 0px 4px #222;
+    background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eeeeee), color-stop(1, #cccccc));
+    background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+}
+/* END OF POPUP MESSAGE RESET ALL BTN */
+
+#label-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-top: 2em;
+    padding: 1.3em 1em;
+    background-color: #616260;
+    border-radius: 2em;
+    font-size: 2em;
+    font-weight: 500;
+    text-align: right;
+}
+
+#label-list li {
+    margin-top: 0.8em;
+}
+
+#label-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+/* END OF MAIN SECTION */
+
+/* FOOTER */
+footer {
+    height: 3em;
+    padding-top: 2em;
+    background-color: #eaeaea;
+    text-align: center;
+    font-size: 0.8em;
+}
+/* CONTROLLED IN JS */
+.label-numbers input {
+    padding-left: 1em;
+    margin-left: 1em;
+    width: 17em;
+    height: 2em;
+    border-radius: 1em;
+    border: none;
+    font-size: 0.8em;
+    background-color: #eaeaea;
+}
+
+.label-numbers span {
+    display: inline-block;
+    padding: 0.3em;
+    margin: auto;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1em;
+    background-color: #50514f;
+    width: 1.2em;
+    border-radius: 1em;
+}

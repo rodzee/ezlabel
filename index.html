@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CUSTOM CSS -->
+        <link rel="stylesheet" href="style.css" />
+
+        <!-- Google Font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>EZ Label - Electrical Panel Label Creator</title>
+    </head>
+    <body>
+        <header>
+            <div id="header-top">
+                <a href="index.html"><img src="img/logo.svg" alt="EZ Label" id="logo" /></a>
+                <div class="social-media">
+                    <a href="http://www.twitter.com"><img src="img/twitter.svg" alt="twitter" class="social-icon" /></a>
+                    <a href="http://www.instagram.com"
+                        ><img src="img/instagram.svg" alt="twitter" class="social-icon"
+                    /></a>
+                    <a href="http://www.facebook.com"
+                        ><img src="img/facebook.svg" alt="twitter" class="social-icon"
+                    /></a>
+                </div>
+            </div>
+
+            <div id="header-bottom">
+                <span id="header-title-top">Electrical Panel</span>
+                <span id="header-title-bottom">Label Creator</span>
+            </div>
+        </header>
+
+        <main>
+            <div id="main-top">
+                <label for="breaker-quantity">Circuit Breaker Quantity:</label>
+                <select name="breaker-quantity" id="breaker-quantity">
+                    <option value="10">10</option>
+                    <option value="24">24</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                    <option value="60">60</option>
+                    <option value="80">80</option>
+                </select>
+                <button id="btn" onclick="genFields()">Set</button>
+
+                <div id="actions">
+                    <ol>
+                        <li>
+                            <a href="" title="Reset All" class="message-btn"
+                                ><img src="img/reset.svg" alt="Reset All" onclick="resetAll()"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href="" title="Print Labels" class="message-btn">
+                                <img src="img/print.svg" alt="Print" onclick="printPage('label-list')" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" title="Email Labels" class="message-btn"
+                                ><img src="img/email.svg" alt="Email" />
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div id="label-list">
+                <ul id="label-container"></ul>
+            </div>
+        </main>
+
+        <footer>
+            <span id="footer">© copyright 2020 Rodzee inc. all rights reserved</span>
+        </footer>
+    </body>
+    <script src="script.js"></script>
+</html>
