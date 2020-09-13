@@ -3,21 +3,30 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
 
-        <!-- CUSTOM CSS -->
-        <link rel="stylesheet" href="style.css" />
-
+        <!-- printJS Library -->
+        <link rel="stylesheet" type="text/css" href="https://printjs-4de6.kxcdn.com/print.min.css" />
         <!-- Google Font -->
         <link
             href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
             rel="stylesheet"
         />
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+            integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+            crossorigin="anonymous"
+        />
+        <!-- CUSTOM CSS -->
+        <link rel="stylesheet" href="style.css" />
 
         <title>EZ Label - Electrical Panel Label Creator</title>
     </head>
     <body>
         <header>
-            <div id="header-top">
+            <div id="header-top" style="width: 100%">
                 <a href="index.html"><img src="img/logo.svg" alt="EZ Label" id="logo" /></a>
                 <div class="social-media">
                     <a href="http://www.twitter.com"><img src="img/twitter.svg" alt="twitter" class="social-icon" /></a>
@@ -51,23 +60,14 @@
                 <button id="btn" onclick="genFields()">Set</button>
 
                 <div id="actions">
-                    <ol>
-                        <li>
-                            <a href="" title="Reset All" class="message-btn"
-                                ><img src="img/reset.svg" alt="Reset All" onclick="resetAll()"
-                            /></a>
+                    <ul>
+                        <li onclick="printPage()">
+                            <img src="img/print.svg" alt="Print" id="actions-print-btn" class="actions-btn" />
                         </li>
                         <li>
-                            <a href="" title="Print Labels" class="message-btn">
-                                <img src="img/print.svg" alt="Print" onclick="printPage('label-list')" />
-                            </a>
+                            <img src="img/email.svg" alt="E-Mail" id="actions-email-btn" class="actions-btn" />
                         </li>
-                        <li>
-                            <a href="" title="Email Labels" class="message-btn"
-                                ><img src="img/email.svg" alt="Email" />
-                            </a>
-                        </li>
-                    </ol>
+                    </ul>
                 </div>
             </div>
 
@@ -80,5 +80,6 @@
             <span id="footer">© copyright 2020 Rodzee inc. all rights reserved</span>
         </footer>
     </body>
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
     <script src="script.js"></script>
 </html>
