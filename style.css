@@ -106,55 +106,31 @@ main {
     -moz-box-shadow: 0 8px 6px -6px #3a3a3a;
     box-shadow: 0 8px 6px -6px #3a3a3a;
     cursor: pointer;
+    transition: color 0.5s;
 }
-#actions > ol {
+
+/* PRINT AND EMAIL SECTION */
+#actions > ul {
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
 }
 
-#actions img {
-    width: 40px;
-    height: 40px;
-    padding-left: 2em;
+#actions-email-btn {
+    margin-left: 2em;
 }
 
-/* POPUP MESSAGE FOR RESET ALL BTN */
-/* https://css-tricks.com/css-content/ */
-
-.message-btn {
-    color: #900;
-    text-decoration: none;
+.actions-btn {
+    cursor: pointer;
 }
 
-.message-btn:hover {
-    color: red;
-    position: relative;
+#actions img:hover {
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.4)) brightness(2);
+    fill: #f25f5c;
+    transition: all 0.7s;
 }
 
-.message-btn[title]:hover::after {
-    content: attr(title);
-    padding: 4px 8px;
-    color: #333;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    white-space: nowrap;
-    z-index: 20px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    -moz-box-shadow: 0px 0px 4px #222;
-    -webkit-box-shadow: 0px 0px 4px #222;
-    box-shadow: 0px 0px 4px #222;
-    background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eeeeee), color-stop(1, #cccccc));
-    background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
-    background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
-    background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
-    background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
-}
-/* END OF POPUP MESSAGE RESET ALL BTN */
-
+/* END OF PRINT AND EMAIL SECTION */
 #label-list {
     display: flex;
     flex-direction: row;
