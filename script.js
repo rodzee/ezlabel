@@ -1,15 +1,15 @@
-const labels = document.querySelector('#label-container');
-const brQuantity = document.querySelector('#breaker-quantity');
+const labelContainer = document.getElementById('label-container');
+const brQuantity = document.getElementById('breaker-quantity');
 
 // GENERATES ALL NUMBERS AND INPUT FIELDS
 let genFields = () => {
-    let numb = [...Array(parseInt(brQuantity.value) + 1).keys()].slice(1);
+    let numbers = [...Array(parseInt(brQuantity.value) + 1).keys()].slice(1);
 
     // generates the numberd input fields
-    let listArr = numb.map((e) => `<li><span>${e}</span>` + `<input type="text" class="label-input"></li>`);
-    labels.innerHTML = listArr.join('');
-    // this added Class is been used to style in CSS
-    labels.classList.add('label-numbers');
+    let listArr = numbers.map(number => `<li><span>${number}</span> <input type="text" class="label-input"></li>`);
+    labelContainer.innerHTML = listArr.join('');
+    
+    labelContainer.classList.add('label-numbers');
 };
 
 genFields();
