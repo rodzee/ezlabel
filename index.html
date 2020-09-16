@@ -5,48 +5,51 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
 
-        <!-- printJS Library -->
+        <!-- ! printJS Library ================================================-->
         <link rel="stylesheet" type="text/css" href="https://printjs-4de6.kxcdn.com/print.min.css" />
-        <!-- Google Font -->
+
+        <!-- ! Google Font ====================================================-->
         <link
             href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
             rel="stylesheet"
         />
-        <!-- Font Awesome -->
+        <!-- ! Font Awesome ===================================================-->
         <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
             integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
             crossorigin="anonymous"
         />
-        <!-- CUSTOM CSS -->
+
+        <!-- ! Custom CSS =====================================================-->
         <link rel="stylesheet" href="style.css" />
 
         <title>EZ Label - Electrical Panel Label Creator</title>
     </head>
     <body>
         <header>
-            <div id="header-top" style="width: 100%">
+            <!-- ! Header Upper Section ============================================-->
+            <div>
                 <a href="index.html"><img src="img/logo.svg" alt="EZ Label" id="logo" /></a>
                 <div class="social-media">
-                    <a href="http://www.twitter.com"><img src="img/twitter.svg" alt="twitter" class="social-icon" /></a>
-                    <a href="http://www.instagram.com"
-                        ><img src="img/instagram.svg" alt="twitter" class="social-icon"
+                    <a href="http://www.twitter.com"
+                        ><img src="img/twitter.svg" alt="twitter" class="social-icon actions-btn"
                     /></a>
-                    <a href="http://www.facebook.com"
-                        ><img src="img/facebook.svg" alt="twitter" class="social-icon"
+                    <a href="http://www.instagram.com"
+                        ><img src="img/instagram.svg" alt="twitter" class="social-icon actions-btn"
                     /></a>
                 </div>
             </div>
-
-            <div id="header-bottom">
-                <span id="header-title-top">Electrical Panel</span>
+            <!-- ! Header Lower Section ============================================-->
+            <div>
+                <span>Electrical Panel</span>
                 <span id="header-title-bottom">Label Creator</span>
             </div>
         </header>
 
         <main>
-            <div id="main-top">
+            <!-- ! Main Upper Section ===============================================-->
+            <div>
                 <label for="breaker-quantity">Circuit Breaker Quantity:</label>
                 <select name="breaker-quantity" id="breaker-quantity">
                     <option value="10">10</option>
@@ -57,8 +60,9 @@
                     <option value="60">60</option>
                     <option value="80">80</option>
                 </select>
-                <button id="btn" onclick="genFields()">Set</button>
+                <button id="set-btn" onclick="genFields()">Set</button>
 
+                <!-- ! Main Lower Section ============================================-->
                 <div id="actions">
                     <ul>
                         <li onclick="printPage()">
@@ -72,6 +76,11 @@
             </div>
 
             <div id="label-list">
+                <div>
+                    <!-- ! label-name-input is been used in JS =======================-->
+                    <input type="text" placeholder="Enter Panel Name" id="label-name-input" />
+                </div>
+
                 <ul id="label-container"></ul>
             </div>
         </main>
@@ -80,6 +89,8 @@
             <span id="footer">© copyright 2020 Rodzee inc. all rights reserved</span>
         </footer>
     </body>
+    <!-- ! printJS Library -->
     <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+    <!-- ! Custom JS -->
     <script src="script.js"></script>
 </html>

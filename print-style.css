@@ -1,3 +1,6 @@
+/**===========================================================================*/
+/** GENERAL ==================================================================*/
+/**===========================================================================*/
 body {
     -webkit-print-color-adjust: exact;
     color-adjust: exact;
@@ -10,21 +13,16 @@ li {
     list-style: none;
 }
 
-#label-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: space-between;
-    margin-top: 2em;
-    padding: 1.3em 1em;
-    background-color: #616260;
-    border-radius: 2em;
+/**===========================================================================*/
+/** LABELS ===================================================================*/
+/**===========================================================================*/
+#label-name-input {
+    width: 100%;
+    border: none;
+    text-align: center;
+    text-transform: capitalize;
     font-size: 2em;
-    font-weight: 500;
-}
-
-#label-list li {
-    margin-top: 0.8em;
+    font-weight: 700;
 }
 
 #label-container {
@@ -32,11 +30,19 @@ li {
     flex-flow: row wrap;
     justify-content: space-around;
 }
-/* CONTROLLED IN JS */
-.label-numbers input {
+/**===========================================================================*/
+/** CONTROLLED IN JS =========================================================*/
+/**===========================================================================*/
+
+.label-input {
+    margin-top: 1em;
+    margin-right: 2em;
+}
+
+#label-container input {
     padding-left: 1em;
     margin-left: 1em;
-    width: 17em;
+    width: 20em;
     height: 2em;
     border-radius: 1em;
     border: none;
@@ -44,7 +50,7 @@ li {
     background-color: #eaeaea;
 }
 
-.label-numbers span {
+#label-container span {
     display: inline-block;
     padding: 0.3em;
     margin: auto;
@@ -54,4 +60,21 @@ li {
     background-color: #eaeaea;
     width: 1.2em;
     border-radius: 1em;
+}
+
+/*! =============================================================================*/
+/*! FIREFOX STYLES ==============================================================*/
+/*! ============================================================================ */
+
+@-moz-document url-prefix() {
+    #label-list {
+        width: 100%;
+    }
+
+    #label-container {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
 }
