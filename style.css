@@ -75,7 +75,8 @@ main > div:first-child {
     align-items: center;
 }
 
-main label {
+/** Circuit Breaker Quantity Text ==============================================*/
+main > div:first-child > label:first-child {
     font-size: 2em;
     font-weight: 700;
 }
@@ -95,7 +96,7 @@ main label {
 
 #set-btn {
     padding: 0.5em;
-    margin-right: 20em;
+    margin-right: 13em;
     margin-left: 0.5em;
     width: 5em;
     font-weight: 700;
@@ -117,6 +118,36 @@ main label {
     transition: color 0.5s;
 }
 
+/** Import File Button==============================================*/
+#import-btn {
+    display: flex;
+    flex-direction: column;
+    padding: 0.3em 0.8em;
+    width: 11em;
+    font-weight: 700;
+    font-size: 1.2em;
+    background-color: #4593fa;
+    color: #eaeaea;
+    border: none;
+    border-radius: 0.4em;
+}
+
+#import-btn label {
+    color: #3a3a3a;
+    font-size: 0.7em;
+    font-weight: 700;
+}
+
+/* #import-btn:hover {
+    background-color: #2965b3;
+    border: 1px solid #3a71b8;
+    -webkit-box-shadow: 0 8px 6px -6px #3a3a3a;
+    -moz-box-shadow: 0 8px 6px -6px #3a3a3a;
+    box-shadow: 0 8px 6px -6px #3a3a3a;
+    cursor: pointer;
+    transition: color 0.5s;
+} */
+
 /**===========================================================================*/
 /** PRINT AND EMAIL SECTION ==================================================*/
 #actions > ul {
@@ -137,6 +168,10 @@ main label {
     filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.4)) brightness(2);
     fill: #f25f5c;
     transition: all 0.7s;
+}
+
+#output-img {
+    display: none;
 }
 
 /** END OF PRINT AND EMAIL SECTION ===========================================*/

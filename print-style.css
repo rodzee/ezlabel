@@ -30,6 +30,12 @@ li {
     flex-flow: row wrap;
     justify-content: space-around;
 }
+
+#output-img {
+    display: block;
+    margin: 3em auto;
+    width: 100px;
+}
 /**===========================================================================*/
 /** CONTROLLED IN JS =========================================================*/
 /**===========================================================================*/
@@ -74,7 +80,8 @@ li {
     #label-container {
         width: 100%;
         display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
+        /* flex-flow: row wrap; */
+        /* justify-content: center; */
+        margin-right: 5em;
     }
 }

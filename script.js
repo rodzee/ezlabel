@@ -29,3 +29,14 @@ function printPage() {
         targetStyles: ['*'],
     });
 }
+
+// =============================================================================
+// IMPORT LOGO FUNCTION ========================================================
+// =============================================================================
+let loadFile = (event) => {
+    let image = document.getElementById('output-img');
+    image.src = URL.createObjectURL(event.target.files[0]);
+};
+
+// ! Resets Import Function because Firefox does not automatically do it
+window.onload = document.getElementById('file').value = '';

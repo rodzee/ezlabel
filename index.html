@@ -60,7 +60,12 @@
                     <option value="60">60</option>
                     <option value="80">80</option>
                 </select>
-                <button id="set-btn" onclick="genFields()">Set</button>
+                <button id="set-btn" onclick="genFields()">Apply</button>
+                <!-- <button id="import-btn" onclick="importLogo()">Import Your Logo</button> -->
+                <div id="import-btn">
+                    <label class="button">Select Your Logo</label>
+                    <input type="file" id="file" accept="image/*" name="image" onchange="loadFile(event)" />
+                </div>
 
                 <!-- ! Main Lower Section ============================================-->
                 <div id="actions">
@@ -77,6 +82,8 @@
 
             <div id="label-list">
                 <div>
+                    <!-- ! printJS does not allow img tag to print -->
+                    <img id="output-img" alt="Company Logo" />
                     <!-- ! label-name-input is been used in JS =======================-->
                     <input type="text" placeholder="Enter Panel Name" id="label-name-input" />
                 </div>
