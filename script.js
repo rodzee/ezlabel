@@ -2,6 +2,9 @@ const labelContainer = document.getElementById('label-container');
 const brQuantity = document.getElementById('breaker-quantity');
 const labelInput = document.getElementById('label-name-input');
 
+const image = document.getElementById('output-img');
+const importBtn = document.getElementById('import-btn');
+console.log(image);
 // =============================================================================
 // GENERATES ALL NUMBERS AND INPUT FIELDS ======================================
 // =============================================================================
@@ -18,9 +21,24 @@ let genFields = () => {
 genFields();
 
 // =============================================================================
+// IMPORT LOGO FUNCTION ========================================================
+// =============================================================================
+let loadFile = (event) => {
+    // console.log(image);
+    // console.log(image.attributes.length);
+
+    image.src = URL.createObjectURL(event.target.files[0]);
+    if (event.target.files[null]) {
+        return;
+    } else {
+        importBtn.style.backgroundColor = '#57aa04';
+    }
+};
+
+// =============================================================================
 // PRINT =======================================================================
 // =============================================================================
-function printPage() {
+let printPage = () => {
     printJS({
         printable: 'label-list',
         type: 'html',
@@ -28,14 +46,6 @@ function printPage() {
         css: 'print-style.css',
         targetStyles: ['*'],
     });
-}
-
-// =============================================================================
-// IMPORT LOGO FUNCTION ========================================================
-// =============================================================================
-let loadFile = (event) => {
-    let image = document.getElementById('output-img');
-    image.src = URL.createObjectURL(event.target.files[0]);
 };
 
 // ! Resets Import Function because Firefox does not automatically do it
