@@ -16,6 +16,10 @@ li {
     list-style: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 /** END OF GENERAL ===========================================================*/
 /**===========================================================================*/
 
@@ -111,12 +115,9 @@ main > div:first-child > label:first-child {
 #set-btn:hover {
     background-color: #e23937;
     color: #333;
-    border: 1px solid #f25f5c;
-    -webkit-box-shadow: 0 8px 6px -6px #3a3a3a;
-    -moz-box-shadow: 0 8px 6px -6px #3a3a3a;
     box-shadow: 0 8px 6px -6px #3a3a3a;
     cursor: pointer;
-    transition: color 0.5s;
+    transition: background-color 0.5s;
 }
 
 /** Import File Button==============================================*/
@@ -139,43 +140,35 @@ main > div:first-child > label:first-child {
     font-weight: 700;
 }
 
-/* #import-btn:hover {
-    background-color: #2965b3;
-    border: 1px solid #3a71b8;
-    -webkit-box-shadow: 0 8px 6px -6px #3a3a3a;
-    -moz-box-shadow: 0 8px 6px -6px #3a3a3a;
-    box-shadow: 0 8px 6px -6px #3a3a3a;
-    cursor: pointer;
-    transition: color 0.5s;
-} */
-
 /**===========================================================================*/
-/** PRINT AND EMAIL SECTION ==================================================*/
-#actions > ul {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+/** PRINT SECTION ============================================================*/
+
+#actions-print-btn {
+    padding: 0.5em;
+    width: 5em;
+    font-weight: 700;
+    font-size: 1.2em;
+    background-color: #eaeaea;
+    color: #333;
+    border-radius: 0.4em;
+    border: none;
 }
 
-#actions-email-btn {
-    margin-left: 2em;
+#actions-print-btn:hover {
+    background-color: #f25f5c;
+    color: #eaeaea;
+    transition: background-color 0.7s;
 }
 
-.actions-btn {
-    cursor: pointer;
-}
-
-.actions-btn:hover {
-    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.4)) brightness(2);
-    fill: #f25f5c;
-    transition: all 0.7s;
+#actions-print-btn:active {
+    transform: translateY(4px);
 }
 
 #output-img {
     display: none;
 }
 
-/** END OF PRINT AND EMAIL SECTION ===========================================*/
+/** END OF PRINT SECTION =====================================================*/
 /**===========================================================================*/
 
 #label-list {

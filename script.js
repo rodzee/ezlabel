@@ -4,7 +4,7 @@ const labelInput = document.getElementById('label-name-input');
 
 const image = document.getElementById('output-img');
 const importBtn = document.getElementById('import-btn');
-console.log(image);
+
 // =============================================================================
 // GENERATES ALL NUMBERS AND INPUT FIELDS ======================================
 // =============================================================================
