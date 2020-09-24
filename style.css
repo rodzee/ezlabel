@@ -16,6 +16,19 @@ li {
     list-style: none;
 }
 
+a,
+a:visited {
+    text-decoration: none;
+    color: #50514f;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #333;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
 button {
     cursor: pointer;
 }
@@ -56,10 +69,6 @@ header > div:last-of-type {
     color: #f25f5c;
 }
 
-.social-icon {
-    width: 2em;
-    margin-left: 2em;
-}
 /** END OF HEADER =============================================================*/
 /**===========================================================================*/
 
@@ -249,4 +258,74 @@ footer {
     background-color: #50514f;
     width: 1.2em;
     border-radius: 1em;
+}
+
+/**===========================================================================*/
+/** FORM (Contact Us) ========================================================*/
+
+form {
+    display: flex;
+    justify-content: space-between;
+}
+
+#form-fields {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    text-transform: capitalize;
+}
+
+#form-fields > div {
+    margin: 0.9em 1em 0 0;
+}
+
+#form-fields > div input {
+    width: 22em;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 1.5em;
+    font-size: 1em;
+}
+
+#form-fields label {
+    margin-right: 0.6em;
+}
+
+#email-container > input {
+    margin-left: 2.5em;
+}
+
+#form-textarea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 52%;
+    margin-top: 0.9em;
+}
+
+#form-textarea > textarea {
+    width: 100%;
+    height: 6.6em;
+    resize: none;
+    padding: 1em;
+    border: none;
+    border-radius: 1em;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+}
+
+#form-textarea > input {
+    font-size: 1em;
+    font-weight: 600;
+    width: 6em;
+    padding: 0.8em;
+    margin-top: 1em;
+    border: none;
+    border-radius: 0.8em;
+}
+
+#form-textarea > input:hover {
+    background-color: #f25f5c;
+    color: #eaeaea;
+    transition: background-color 0.7s;
 }
