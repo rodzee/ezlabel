@@ -4,6 +4,7 @@ const labelInput = document.getElementById('label-name-input');
 
 const image = document.getElementById('output-img');
 const importBtn = document.getElementById('import-btn');
+const importBtnImg = document.getElementById('import-btn-img');
 
 // =============================================================================
 // GENERATES ALL NUMBERS AND INPUT FIELDS ======================================
@@ -32,6 +33,7 @@ let loadFile = (event) => {
         return;
     } else {
         importBtn.style.backgroundColor = '#57aa04';
+        importBtnImg.src = image.src;
     }
 };
 
