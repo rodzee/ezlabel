@@ -69,9 +69,8 @@ li {
 }
 
 /*! =============================================================================*/
-/*! FIREFOX STYLES ==============================================================*/
+/*! FIREFOX AND SAFARI STYLES ===================================================*/
 /*! ============================================================================ */
-
 @-moz-document url-prefix() {
     #label-list {
         width: 100%;
@@ -80,8 +79,36 @@ li {
     #label-container {
         width: 100%;
         display: flex;
-        /* flex-flow: row wrap; */
-        /* justify-content: center; */
-        margin-right: 5em;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) and (display: flow-root) {
+        #label-list {
+            width: 100%;
+        }
+
+        #label-container {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+        }
+    }
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    #label-container,
+    #label-list {
+        margin-top: 0 !important;
+    }
+    #output-img {
+        margin: 0;
     }
 }

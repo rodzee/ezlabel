@@ -101,6 +101,8 @@ main > div:first-child > label:first-child {
     width: 3em;
     font-size: 1.2em;
     font-weight: 700;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     background-color: #eaeaea;
     color: #50514f;
