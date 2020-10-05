@@ -350,7 +350,7 @@ form {
 /** MEDIA QUERIES */
 /** ===========================================================================*/
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 430px) {
     header {
         height: 8em;
     }
@@ -427,19 +427,63 @@ form {
         margin-top: 0;
     }
 
+    #label-container > li {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
     .label-numbers span {
         font-size: 0.8em;
         padding: 0.1em;
+        margin: 0;
     }
 
     .label-numbers input {
         height: 1.5em;
-        width: 11em;
+        width: 75%;
         margin-left: 0;
         font-size: 0.7em;
     }
 
     footer {
         font-size: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    main > div:first-child > label:first-child {
+        font-size: 1.47em;
+    }
+
+    #set-btn {
+        margin-right: 3em;
+    }
+
+    #import-btn {
+        height: 1.9em;
+        width: 10em;
+        margin-right: 1em;
+        padding: 0.2em 0.4em;
+    }
+
+    main > div:first-child > label:first-child {
+        font-size: 1.4em;
+    }
+
+    #label-container > li {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .label-numbers span {
+        margin: 0;
+    }
+
+    .label-numbers input {
+        margin-left: 0;
+        width: 80%;
     }
 }
