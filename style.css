@@ -375,7 +375,6 @@ form {
     main > div:first-child {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
     }
 
     main > div:first-child > label:first-child {
@@ -383,7 +382,6 @@ form {
     }
 
     #breaker-quantity {
-        /* height: 2em; */
         width: 5em;
         margin: 1em 0.2em 1em 0;
         text-align: center;
@@ -391,8 +389,8 @@ form {
 
     #set-btn {
         height: 2.6em;
-        width: 14em;
-        margin: 1em 0 1em 0;
+        width: 11em;
+        margin-right: 0 !important;
         padding: 0 0.2em;
         font-size: 1em;
     }
